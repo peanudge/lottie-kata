@@ -1,38 +1,57 @@
+html, body, h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
 .App {
-  text-align: center;
+  position: fixed;
+  display: flex;
+  overflow: scroll;
+  align-items: stretch;
+  inset: 0px;  
+  padding: 80px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Modal { 
+  user-select: none;
+  margin: auto;
+  width: 500px; 
+  min-height: 300px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  cursor: pointer;
+}
+ 
+
+.ModalFooter {
+  margin-top:auto;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.ModalFooter button {
+  padding: 10px 20px;
+  background-color: rgba(0,0,0,0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ModalFooter button:hover {
+    opacity: 0.8;
+}
+
+.ModalFooter button:active {
+  transform: translate(1px, 1px);
+}
+
+.Cursor {
+  background-color: blue;
+  border-radius: 50%;
+  width: 25px;height: 25px;
 }
